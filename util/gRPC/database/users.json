@@ -28,5 +28,17 @@
     "email": "valeria@test.com",
     "password": "1244",
     "id": 12
+  },
+  {
+    "name": "Esteban1783129493335",
+    "email": "esteban1783129493335@test.com",
+    "password": "Pass1783129493335!",
+    "id": 13
+  },
+  {
+    "name": "Esteban1783129637071",
+    "email": "esteban1783129637071@test.com",
+    "password": "Pass1783129637071!",
+    "id": 14
   }
 ]

@@ -1,18 +1,21 @@
 import { test, expect } from "@playwright/test";
 import { GrpcClient } from "../../util/gRPC/grpcClient";
+import { TestData } from "../../util/gRPC/generators/userGenerator";
 
 const grpc = new GrpcClient();
 
 test("crear usuario", async () => {
 
+    const user = TestData.uniqueUser();
+
     const response = await grpc.createUser({
-            name: "Valeria",
-            email: "valeria@test.com",
-            password: "1244"
+            name: user.name,
+            email: user.email,
+            password: user.password
         });
 
-    expect(response.name).toBe("Valeria");
-    expect(response.email).toBe("valeria@test.com");
+    expect(response.name).toBe(user.name);
+    expect(response.email).toBe(user.email);
 
 });
 

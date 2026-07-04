@@ -18,23 +18,9 @@ test("Obtener usuario grpc", async () => {
 
 test("usuario no existe", async () => {
 
-    await expect(async () => {
-
-        await new Promise((resolve, reject) => {
-
-            client.GetUser(
-                { id: 999 },
-                (err: any, res: any) => {
-
-                    if (err) reject(err);
-                    else resolve(res);
-
-                }
-            );
-
-        });
-
-    }).rejects.toMatchObject({
+ await expect(
+        grpc.getUser(999)
+    ).rejects.toMatchObject({
         code: 5 // NOT_FOUND
     });
 
