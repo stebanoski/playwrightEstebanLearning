@@ -17,6 +17,23 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - name: Start gRPC mock server
+      run: |
+        nohup npx ts-node util/gRPC/mock-server/mock-server.ts > mock-server.log 2>&1 &
+        echo "Mock server iniciado en background (PID: $!)"
+    - name: Wait for gRPC mock server to be ready
+      run: |
+          for i in {1..15}; do
+            if nc -z localhost 50051; then
+              echo "Mock server listo"
+              exit 0
+            fi
+            echo "Esperando mock server... intento $i"
+            sleep 1
+          done
+          echo "El mock server no levantó a tiempo"
+          cat mock-server.log
+          exit 1
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
