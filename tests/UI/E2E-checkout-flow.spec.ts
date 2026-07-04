@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
-import { LoginPage } from "./pageobjects/LoginPage";
-import { InventoryPage } from "./pageobjects/InventoryPage";
-import { CartPage } from "./pageobjects/CartPage";
-import { CheckOutStepOnePage } from "./pageobjects/CheckOutStepOnePage";
-import { CheckOutStepTwoPage } from "./pageobjects/CheckOutStepTwoPage";
-import { CheckOutCompletedPage } from "./pageobjects/CheckOutCompletedPage";
+import { LoginPage } from "../../util/UI/pageobjects/LoginPage";
+import { InventoryPage } from "../../util/UI/pageobjects/InventoryPage";
+import { CartPage } from "../../util/UI/pageobjects/CartPage";
+import { CheckOutStepOnePage } from "../../util/UI/pageobjects/CheckOutStepOnePage";
+import { CheckOutStepTwoPage } from "../../util/UI/pageobjects/CheckOutStepTwoPage";
+import { CheckOutCompletedPage } from "../../util/UI/pageobjects/CheckOutCompletedPage";
 
 test.use({storageState: {cookies:[], origins:[]}})
 

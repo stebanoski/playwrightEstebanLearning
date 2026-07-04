@@ -1,7 +1,7 @@
 // Generado por qa-agent.ts
 
 import { test, expect } from "@playwright/test";
-import { LoginPage } from "./pageobjects/LoginPage";
+import { LoginPage } from "../../util/UI/pageobjects/LoginPage";
 
 test.use({ storageState: { cookies: [], origins: [] } })
 

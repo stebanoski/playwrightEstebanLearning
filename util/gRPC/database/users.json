@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Juan",
+    "email": "juan@test.cl",
+    "password": "1234"
+  },
+  {
+    "id": 2,
+    "name": "Pedro",
+    "email": "pedro@test.cl",
+    "password": "abcd"
+  },
+  {
+    "id": 10,
+    "name": "Esteban",
+    "email": "esteban@test.com",
+    "password": "playwright"
+  },
+  {
+    "name": "Carlos",
+    "email": "carlos@test.com",
+    "password": "1234",
+    "id": 11
+  },
+  {
+    "name": "Valeria",
+    "email": "valeria@test.com",
+    "password": "1244",
+    "id": 12
+  }
+]
