@@ -1,0 +1,21 @@
+{
+  "name": "k6-performance",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "ramp-test.js",
+  "scripts": {
+    "test:ramp": "k6 run ramp-test.ts",
+    "test:thresholds": "k6 run thresholds-test.ts",
+    "test:stress": "k6 run stress-test.ts",
+    "test:combined": "k6 run combined-test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/k6": "^2.0.0",
+    "typescript": "^6.0.3"
+  }
+}
